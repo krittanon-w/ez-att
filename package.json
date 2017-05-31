@@ -1,0 +1,22 @@
+{
+  "name": "ez-att",
+  "version": "1.0.0",
+  "description": "back-end for easy attendance platfrom project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krittanon-w/ez-att.git"
+  },
+  "keywords": [
+    "attendance"
+  ],
+  "author": "krittanon.w",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krittanon-w/ez-att/issues"
+  },
+  "homepage": "https://github.com/krittanon-w/ez-att#readme"
+}
