@@ -3,13 +3,14 @@
 // import
 import DB from '../db.js'
 import { Util, Enum } from '../helper'
+import { ObjectID } from 'mongodb'
 
 const collectionName = 'event_logs'
 
 const attendance = (data, event_type, done) => {
   var event_logs = DB.get().collection(collectionName)
   var query = {
-    user_id: data.user_id,
+    user_id: new ObjectID(data.user_id),
     time_year: new Date(data.att_time).getUTCFullYear(),
     time_month: new Date(data.att_time).getUTCMonth()+1
   }
