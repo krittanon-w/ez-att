@@ -4,9 +4,9 @@
   "description": "back-end for easy attendance platfrom project",
   "main": "src/server.js",
   "scripts": {
-    "start": "nodemon src/server.js --exec babel-node",
+    "start": "npm run build && node dist/server.js",
     "build": "babel ./src --out-dir=./dist",
-    "serve": "node dist/server.js",
+    "dev": "nodemon src/server.js --exec babel-node",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
