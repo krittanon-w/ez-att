@@ -14,7 +14,10 @@ const connect = (done) =>  {
   if (state.db) return done()
 
   MongoClient.connect(Config.mongodb.url, Config.mongodb.options,(err, db) => {
-    if (err) return done(err)
+    if (err) {
+      console.log("Mongodb can't connect to "+Config.mongodb.url)
+      return done(err)
+    }
     state.db = db
     console.log('MongoDb Conected on', Config.mongodb.url)
     done()

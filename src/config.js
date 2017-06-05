@@ -1,12 +1,12 @@
 'use strict'
 
 const server = {
-  host: 'localhost',
-  port: 8000
+  host: process.env.HOST || 'localhost',
+  port: process.env.HOST_PORT || 8000
 }
 
 const mongodb = {
-  url : 'mongodb://localhost:27017/ez-att',
+  url : process.env.DB_URL || 'mongodb://localhost:27017/ez-att',
   options: {
     poolSize: 5,
     reconnectTries: 3600,

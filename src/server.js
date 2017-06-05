@@ -12,8 +12,8 @@ import Mongodb from './db.js'
 // server setup
 var server = Http.createServer(Api)
 
-Mongodb.connect(() => {
-  server.listen(Config.server.port)
+Mongodb.connect((err) => {
+  if(!err) server.listen(Config.server.port)
 })
 
 // on server start
