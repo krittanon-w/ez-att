@@ -49,7 +49,7 @@ const createCheckout = (data, done) => {
 const getEventLogsByUserAndTime = (data, done) => {
   var event_logs = DB.get().collection(collectionName)
   var query = {
-    user_id: data.user_id,
+    user_id: new ObjectID(data.user_id),
     time_month: data.time_month,
     time_year: data.time_year
   }
