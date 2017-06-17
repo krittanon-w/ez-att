@@ -15,7 +15,7 @@ import Config from '../config.js'
 
 
 router.route('/*').all((req, res, next) => {
-  console.log(req.originalUrl)
+  console.log(req.originaladdUrl)
   // console.log(req.path)g
   console.log(req.body)
   const token = req.body.acc_token
